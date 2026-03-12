@@ -33,7 +33,7 @@
       overflow-x: hidden;
     }
 
-    /* HERO */
+    /* ══ HERO ══ */
     .hero {
       background-color: var(--dark);
       color: var(--cream);
@@ -133,6 +133,7 @@
       color: rgba(245,240,232,0.65);
       text-decoration: none;
       transition: color 0.2s;
+      cursor: pointer;
     }
 
     .contact-item:hover { color: var(--gold-light); }
@@ -150,7 +151,7 @@
       line-height: 1;
     }
 
-    /* Hero derecho decorativo */
+    /* ══ HERO DERECHO DECORATIVO ══ */
     .hero-right {
       position: relative;
       display: flex;
@@ -214,23 +215,21 @@
       font-weight: 500;
     }
 
-    /* DIVIDER */
+    /* ══ DIVIDER ══ */
     .section-divider {
       height: 1px;
       background: linear-gradient(to right, transparent, var(--gold), transparent);
       opacity: 0.35;
     }
 
-    /* MAIN */
+    /* ══ MAIN ══ */
     main {
       max-width: 1100px;
       margin: 0 auto;
       padding: 90px 48px;
     }
 
-    .section {
-      margin-bottom: 90px;
-    }
+    .section { margin-bottom: 90px; }
 
     .section-label {
       font-size: 10px;
@@ -250,7 +249,7 @@
       line-height: 1.1;
     }
 
-    /* TIMELINE */
+    /* ══ TIMELINE ══ */
     .timeline {
       position: relative;
       padding-left: 36px;
@@ -351,7 +350,7 @@
       color: var(--gold);
     }
 
-    /* DOS COLUMNAS */
+    /* ══ DOS COLUMNAS ══ */
     .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -489,7 +488,7 @@
       color: var(--gold);
     }
 
-    /* FOOTER */
+    /* ══ FOOTER ══ */
     footer {
       background: var(--dark);
       color: rgba(245,240,232,0.38);
@@ -501,7 +500,7 @@
 
     footer span { color: var(--gold); }
 
-    /* ANIMACIONES */
+    /* ══ ANIMACIONES ══ */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(22px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -512,7 +511,7 @@
       to   { opacity: 1; }
     }
 
-    /* RESPONSIVE */
+    /* ══ RESPONSIVE ══ */
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-left { padding: 64px 36px 56px; }
@@ -533,27 +532,28 @@
 </head>
 <body>
 
-<!-- HERO -->
+<!-- ══ HERO ══ -->
 <section class="hero">
   <div class="hero-left">
     <p class="eyebrow">Perfil Profesional &middot; Chile</p>
     <h1 class="hero-name">Catalina<br><em>Quezada</em> Bodaleo</h1>
-    <p class="hero-title">Ingeniera Industrial &middot; Gestión de Procesos &amp; Experiencia Cliente</p>
+    <p class="hero-title">Ingeniera Industrial &middot; Gesti&#243;n de Procesos &amp; Experiencia Cliente</p>
     <p class="hero-summary">
-      Profesional con sólida formación en el sector de servicios y más de cinco años de experiencia
-      en atención al cliente, análisis de incidencias y mejora continua. Comprometida con la eficiencia,
-      la innovación y la satisfacción del cliente mediante metodología Lean.
+      Profesional con s&#243;lida formaci&#243;n en el sector de servicios y m&#225;s de cinco a&#241;os de experiencia
+      en atenci&#243;n al cliente, an&#225;lisis de incidencias y mejora continua. Comprometida con la eficiencia,
+      la innovaci&#243;n y la satisfacci&#243;n del cliente mediante metodolog&#237;a Lean.
     </p>
     <div class="hero-contacts">
       <a class="contact-item" href="tel:+56932538858">
         <span class="contact-icon" aria-hidden="true">&#9990;</span>
         +56 9 3253 8858
       </a>
-      <a class="contact-item" href="/cdn-cgi/l/email-protection#10737164717c797e713e6165756a7174713e7250777d71797c3e737f7d">
+      <!-- Correo protegido nativamente sin scripts externos -->
+      <a class="contact-item" id="email-link" href="#">
         <span class="contact-icon" aria-hidden="true">&#9993;</span>
-        <span class="__cf_email__" data-cfemail="30535144515c595e511e4145554a5154511e5270575d51595c1e535f5d">[email&#160;protected]</span>
+        <span id="email-text">catalina.quezada.b&#64;gmail.com</span>
       </a>
-      <a class="contact-item" href="https://www.linkedin.com/in/catalina-quezada-bodaleo-883071b9" target="_blank" rel="noopener">
+      <a class="contact-item" href="https://www.linkedin.com/in/catalina-quezada-bodaleo-883071b9" target="_blank" rel="noopener noreferrer">
         <span class="contact-icon" style="font-size:11px; font-weight:600;" aria-hidden="true">in</span>
         linkedin.com/in/catalina-quezada-bodaleo
       </a>
@@ -569,7 +569,7 @@
     </div>
     <div class="skills-tags">
       <span class="tag">Lean &amp; Mejora Continua</span>
-      <span class="tag">Gestión de Proyectos</span>
+      <span class="tag">Gesti&#243;n de Proyectos</span>
       <span class="tag">Experiencia Cliente</span>
     </div>
   </div>
@@ -577,9 +577,10 @@
 
 <div class="section-divider" role="separator"></div>
 
-<!-- MAIN -->
+<!-- ══ MAIN ══ -->
 <main>
 
+  <!-- EXPERIENCIA -->
   <section class="section" aria-label="Experiencia profesional">
     <p class="section-label">Trayectoria</p>
     <h2 class="section-title">Experiencia Profesional</h2>
@@ -588,44 +589,44 @@
 
       <article class="timeline-item">
         <div class="job-header">
-          <h3 class="job-title">Ejecutiva de Atención al Cliente</h3>
-          <span class="job-period">Sep 2021 &ndash; Presente &middot; 4 años</span>
+          <h3 class="job-title">Ejecutiva de Atenci&#243;n al Cliente</h3>
+          <span class="job-period">Sep 2021 &ndash; Presente &middot; 4 a&#241;os</span>
         </div>
-        <p class="job-company">Fundación Chile</p>
+        <p class="job-company">Fundaci&#243;n Chile</p>
         <ul class="job-tasks">
-          <li>Gestión de solicitudes de usuarios de plataformas digitales a través de llamadas, correos y sistema de tickets, garantizando tiempos de respuesta eficientes.</li>
-          <li>Resolución de incidencias y preguntas frecuentes, mejorando la experiencia cliente y asegurando la continuidad en el uso de plataformas de gestión de personas.</li>
-          <li>Seguimiento de procesos y envío de notificaciones automatizadas, optimizando la comunicación interna.</li>
-          <li>Configuración y validación de datos en Excel para carga en plataforma, asegurando precisión y calidad de la información.</li>
-          <li>Elaboración de reportes de resultados y métricas de uso para la toma de decisiones de clientes.</li>
+          <li>Gesti&#243;n de solicitudes de usuarios de plataformas digitales a trav&#233;s de llamadas, correos y sistema de tickets, garantizando tiempos de respuesta eficientes.</li>
+          <li>Resoluci&#243;n de incidencias y preguntas frecuentes, mejorando la experiencia cliente y asegurando la continuidad en el uso de plataformas de gesti&#243;n de personas.</li>
+          <li>Seguimiento de procesos y env&#237;o de notificaciones automatizadas, optimizando la comunicaci&#243;n interna.</li>
+          <li>Configuraci&#243;n y validaci&#243;n de datos en Excel para carga en plataforma, asegurando precisi&#243;n y calidad de la informaci&#243;n.</li>
+          <li>Elaboraci&#243;n de reportes de resultados y m&#233;tricas de uso para la toma de decisiones de clientes.</li>
         </ul>
       </article>
 
       <article class="timeline-item">
         <div class="job-header">
           <h3 class="job-title">Asistente de Clientes</h3>
-          <span class="job-period">Jul 2018 &ndash; Ago 2021 &middot; 3 años</span>
+          <span class="job-period">Jul 2018 &ndash; Ago 2021 &middot; 3 a&#241;os</span>
         </div>
         <p class="job-company">Mallplaza &middot; Santiago, RM</p>
         <ul class="job-tasks">
-          <li>Gestión de reclamos de visitantes mediante CRM, asegurando seguimiento y soluciones oportunas.</li>
-          <li>Participación en iniciativas de mejora continua de instalaciones mediante levantamientos periódicos.</li>
-          <li>Revisión y actualización de plataformas digitales, optimizando la comunicación con usuarios.</li>
-          <li>Elaboración de reportes diarios de encuestas NPS, identificando oportunidades de mejora en la satisfacción del cliente.</li>
+          <li>Gesti&#243;n de reclamos de visitantes mediante CRM, asegurando seguimiento y soluciones oportunas.</li>
+          <li>Participaci&#243;n en iniciativas de mejora continua de instalaciones (look &amp; feel) mediante levantamientos peri&#243;dicos.</li>
+          <li>Revisi&#243;n y actualizaci&#243;n de plataformas digitales, optimizando la comunicaci&#243;n con usuarios.</li>
+          <li>Elaboraci&#243;n de reportes diarios de encuestas NPS, identificando oportunidades de mejora en la satisfacci&#243;n del cliente.</li>
         </ul>
       </article>
 
       <article class="timeline-item">
         <div class="job-header">
           <h3 class="job-title">Asistente Administrativa</h3>
-          <span class="job-period">Mar 2017 &ndash; Jun 2018 &middot; 1 año 4 meses</span>
+          <span class="job-period">Mar 2017 &ndash; Jun 2018 &middot; 1 a&#241;o 4 meses</span>
         </div>
         <p class="job-company">MVSGROUP &ndash; Banco BCI &middot; Santiago, RM</p>
         <ul class="job-tasks">
-          <li>Atención presencial y telefónica a clientes internos y externos, asegurando servicio eficiente y de calidad.</li>
-          <li>Actualización y seguimiento de la cartera de clientes, garantizando precisión en la información.</li>
-          <li>Elaboración de informes diarios y reportes de gestión para la toma de decisiones del departamento.</li>
-          <li>Coordinación de procesos internos, contribuyendo a la mejora continua y optimización de tiempos.</li>
+          <li>Atenci&#243;n presencial y telef&#243;nica a clientes internos y externos, asegurando servicio eficiente y de calidad.</li>
+          <li>Actualizaci&#243;n y seguimiento de la cartera de clientes, garantizando precisi&#243;n en la informaci&#243;n.</li>
+          <li>Elaboraci&#243;n de informes diarios y reportes de gesti&#243;n para la toma de decisiones del departamento.</li>
+          <li>Coordinaci&#243;n de procesos internos, contribuyendo a la mejora continua y optimizaci&#243;n de tiempos.</li>
         </ul>
       </article>
 
@@ -634,75 +635,80 @@
           <h3 class="job-title">Agente Control de Pasajeros</h3>
           <span class="job-period">Ene 2016 &ndash; Nov 2016 &middot; 11 meses</span>
         </div>
-        <p class="job-company">Grupo de Empresas Turbus S.A. &middot; Estación Central, RM</p>
+        <p class="job-company">Grupo de Empresas Turbus S.A. &middot; Estaci&#243;n Central, RM</p>
         <ul class="job-tasks">
-          <li>Operación en el Centro de Control de Pasajeros (CCP), gestionando sistemas de contingencia y ajustes de servicios.</li>
-          <li>Elaboración de itinerarios y coordinación de servicios diarios.</li>
-          <li>Revisión de demanda de servicios diarios aportando información para decisiones operativas y comerciales.</li>
+          <li>Operaci&#243;n en el Centro de Control de Pasajeros (CCP), gestionando sistemas de contingencia y ajustes de servicios seg&#250;n cambios operativos.</li>
+          <li>Elaboraci&#243;n de itinerarios, asegurando la correcta planificaci&#243;n y coordinaci&#243;n de servicios diarios.</li>
+          <li>Revisi&#243;n de la demanda de servicios diarios, aportando informaci&#243;n para decisiones operativas y comerciales.</li>
+          <li>Contribuci&#243;n a la optimizaci&#243;n de procesos internos, mejorando la eficiencia y confiabilidad de la operaci&#243;n.</li>
         </ul>
       </article>
 
       <article class="timeline-item">
         <div class="job-header">
-          <h3 class="job-title">Estudiante en Práctica &mdash; Depto. Ingeniería</h3>
+          <h3 class="job-title">Estudiante en Pr&#225;ctica &mdash; Depto. Ingenier&#237;a</h3>
           <span class="job-period">Ene 2015 &ndash; Mar 2015</span>
         </div>
         <p class="job-company">Hotel Sheraton Santiago</p>
         <ul class="job-tasks">
-          <li>Labores administrativas incluyendo registros de consumos, facturas, cotizaciones y órdenes de compra.</li>
-          <li>Gestión de pagos a proveedores y tramitación de documentos.</li>
-          <li>Apoyo a la operación diaria del hotel, resolviendo incidencias de distintos departamentos.</li>
+          <li>Labores administrativas incluyendo registros de consumos, facturas, cotizaciones y &#243;rdenes de compra.</li>
+          <li>Apoyo en gesti&#243;n de pagos a proveedores, asegurando la correcta tramitaci&#243;n y control de documentos.</li>
+          <li>Atenci&#243;n a requerimientos de distintos departamentos, resolviendo incidencias de habitaciones, &#225;reas p&#250;blicas y administrativas.</li>
+          <li>Propuesta de ajustes en gesti&#243;n de recursos que impactaron en la eficiencia y satisfacci&#243;n de hu&#233;spedes.</li>
         </ul>
       </article>
 
     </div>
   </section>
 
+  <!-- APTITUDES + EDUCACION + IDIOMAS -->
   <section class="section" aria-label="Aptitudes y formacion">
     <div class="two-col">
 
+      <!-- Aptitudes -->
       <div>
         <p class="section-label">Competencias</p>
         <h2 class="section-title">Aptitudes Clave</h2>
         <div class="skills-list">
           <div class="skill-item">
-            <div class="skill-name">Gestión Administrativa y Control de Recursos</div>
+            <div class="skill-name">Gesti&#243;n Administrativa y Control de Recursos</div>
             <div class="skill-bar"><div class="skill-fill" data-width="92%"></div></div>
           </div>
           <div class="skill-item">
-            <div class="skill-name">Resolución de Incidencias</div>
+            <div class="skill-name">Resoluci&#243;n de Incidencias</div>
             <div class="skill-bar"><div class="skill-fill" data-width="95%"></div></div>
           </div>
           <div class="skill-item">
-            <div class="skill-name">Gestión Operativa y Coordinación</div>
+            <div class="skill-name">Gesti&#243;n Operativa y Coordinaci&#243;n</div>
             <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
           </div>
           <div class="skill-item">
-            <div class="skill-name">Mejora Continua (Metodología Lean)</div>
+            <div class="skill-name">Mejora Continua (Metodolog&#237;a Lean)</div>
             <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
           </div>
           <div class="skill-item">
-            <div class="skill-name">Análisis de Datos y Reportería (Excel)</div>
+            <div class="skill-name">An&#225;lisis de Datos y Reporter&#237;a (Excel)</div>
             <div class="skill-bar"><div class="skill-fill" data-width="88%"></div></div>
           </div>
           <div class="skill-item">
-            <div class="skill-name">Gestión de CRM y Plataformas Digitales</div>
+            <div class="skill-name">Gesti&#243;n de CRM y Plataformas Digitales</div>
             <div class="skill-bar"><div class="skill-fill" data-width="87%"></div></div>
           </div>
         </div>
       </div>
 
+      <!-- Educacion + Idiomas -->
       <div>
-        <p class="section-label">Formación</p>
-        <h2 class="section-title">Educación</h2>
+        <p class="section-label">Formaci&#243;n</p>
+        <h2 class="section-title">Educaci&#243;n</h2>
         <div class="edu-list">
           <div class="edu-item">
-            <p class="edu-degree">Ingeniería Industrial</p>
+            <p class="edu-degree">Ingenier&#237;a Industrial</p>
             <p class="edu-school">Universidad Mayor</p>
-            <p class="edu-period">Mar 2021 &ndash; Ago 2025 &middot; En proceso de titulación</p>
+            <p class="edu-period">Mar 2021 &ndash; Ago 2025 &middot; En proceso de titulaci&#243;n</p>
           </div>
           <div class="edu-item">
-            <p class="edu-degree">Técnico en Empresas Turísticas</p>
+            <p class="edu-degree">T&#233;cnico en Empresas Tur&#237;sticas</p>
             <p class="edu-school">Duoc UC</p>
             <p class="edu-period">Mar 2013 &ndash; Sep 2015</p>
           </div>
@@ -711,11 +717,11 @@
         <p class="lang-section-label">Idiomas</p>
         <div class="lang-grid">
           <div class="lang-card">
-            <p class="lang-name">Español</p>
-            <p class="lang-level">Nativo / Bilingüe</p>
+            <p class="lang-name">Espa&#241;ol</p>
+            <p class="lang-level">Nativo / Biling&#252;e</p>
           </div>
           <div class="lang-card">
-            <p class="lang-name">Inglés</p>
+            <p class="lang-name">Ingl&#233;s</p>
             <p class="lang-level">Nivel Profesional</p>
           </div>
         </div>
@@ -730,11 +736,32 @@
   <p>&#169; 2025 <span>Catalina Quezada Bodaleo</span> &middot; Ingeniera Industrial &middot; Chile</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+<script>
+  // Reconstruir el enlace de correo desde partes para evitar que servicios externos lo modifiquen
+  (function() {
+    var u = 'catalina.quezada.b';
+    var d = 'gmail.com';
+    var link = document.getElementById('email-link');
+    if (link) link.setAttribute('href', 'mailto:' + u + '\u0040' + d);
+  })();
+
+  // Animaciones de scroll — se ejecutan solo una vez por elemento
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry, i) {
       if (entry.isIntersecting) {
-        setTimeout(() => {
+        setTimeout(function() {
           entry.target.classList.add('visible');
-          const fill = entry.target.querySelector('.skill-fill');
-          if (fill) fill.style.width = fill.dataset.width;
+          var fill = entry.target.querySelector('.skill-fill');
+          if (fill) fill.style.width = fill.getAttribute('data-width');
+        }, i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.timeline-item, .skill-item, .edu-item, .lang-card').forEach(function(el) {
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
